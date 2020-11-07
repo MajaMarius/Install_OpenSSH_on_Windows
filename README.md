@@ -38,7 +38,7 @@ Go to .ssh/ and create a file called authorized_keys with your key inside
   echo 'your-ssh-key' > authorized_keys
 ```
 
-### If you want to ssh from here to other machines you need to set your **private** key perminions to 600 using:
+### If you want to ssh from here to other machines you need to set your **private** key permissions to 600 using:
 
 ```
 chmod 600 .ssh/id_rsa
