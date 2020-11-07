@@ -20,6 +20,17 @@ AuthorizedKeysFile .ssh/authorized_keys
 
 If the service sshd did not started automaticaly reboot the windows machine or go to C:\Program Files\OpenSSH\usr\sbin\ and execute 'sshd.exe' file
 
+If you have connecion problems open the firewall for sshd.exe to allow inbound SSH connections
+
+```
+New-NetFirewallRule -Name sshd -DisplayName 'OpenSSH Server (sshd)' -Enabled True -Direction Inbound -Protocol TCP -Action Allow -LocalPort 22
+```
+Note: New-NetFirewallRule is for Windows 2012 and above servers only. If you're on a client desktop machine (like Windows 10) or Windows 2008 R2 and below, try:
+
+```
+netsh advfirewall firewall add rule name=sshd dir=in action=allow protocol=TCP localport=22
+```
+
 ## 2. On client side
 
 Copy your ssh key from .ssh/
