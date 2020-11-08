@@ -8,7 +8,7 @@ Got to next link and download the latest version
 https://www.mls-software.com/opensshd.html
 ```
 
-Install the application changing the default password
+Install the application in C:\Program Files\OpenSSH changing the generated password with your one.
 
 Go to C:\Program Files\OpenSSH\etc, Open the file 'sshd_config' with notepad and edit and uncomment next line:
 
